@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Check</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Daily Check</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./temperatura.html">Temperatura</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#tasksModal">Tarefas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="row">
+        
+        <div class="col-md-4">
+            
+            <div class="card">
+                
+                <img src="./img/frio.png" class="card-img-top" alt="Produto 1">
+                
+                <div class="card-body">
+                    
+                    <h5 class="card-title">Tarefa de inverno</h5>
+                    <p class="card-text">Tirar neve da calçada </p>
+                    <button type="button" class="btn btn-primary btn-details" data-bs-toggle="modal" data-bs-target="#Modal1">
+                      Informaçoes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="col-md-4">
+            
+            <div class="card">
+                
+                <img src="./img/outono.png" class="card-img-top" alt="Produto 2">
+                
+                <div class="card-body">
+                    
+                    <h5 class="card-title">Tarefa de outono</h5>
+                    <p class="card-text">Poldar arvore</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal2">
+                      Informaçoes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="col-md-4">
+            
+            <div class="card">
+                
+                <img src="./img/primavera.png" class="card-img-top" alt="Produto 3">
+                
+                <div class="card-body">
+                    
+                    <h5 class="card-title">Tarefa de primavera</h5>
+                    <p class="card-text">Limpar quintal </p>
+                    <button type="button" class="btn btn-primary btn-details" data-bs-toggle="modal" data-bs-target="#Modal3">
+                      Informaçoes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        
+        <div class="col-md-4">
+            
+            <div class="card">
+                
+                <img src="./img/verao.png" class="card-img-top" alt="Produto 4">
+                
+                <div class="card-body">
+                    
+                    <h5 class="card-title">Tarefas de verão</h5>
+                    <p class="card-text">Arrumar casa de praia</p>
+                    <button type="button" class="btn btn-primary btn-details" data-bs-toggle="modal" data-bs-target="#Modal4">
+                        Informaçoes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+
+<div class="modal-dialog modal-dialog-centered">
+    
+    <div class="modal-content">
+        
+        <div class="modal-header">
+            
+            <h5 class="modal-title" id="exampleModalLabel1"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        
+        </div>
+
+  <div class="modal fade" id="tasksModal" tabindex="-1" role="dialog" aria-labelledby="tasksModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tasksModalLabel">Tarefas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="taskNameInput">Nome da Tarefa</label>
+              <input type="text" class="form-control" id="taskNameInput" placeholder="Digite o nome da tarefa">
+            </div>
+            <div class="form-group">
+              <label for="startDateInput">Dia de Início</label>
+              <input type="date" class="form-control" id="startDateInput">
+            </div>
+            <div class="form-group">
+              <label for="endDateInput">Dia do Fim</label>
+              <input type="date" class="form-control" id="endDateInput">
+            </div>
+            <div class="form-group">
+              <label for="descriptionInput">Descrição</label>
+              <textarea class="form-control" id="descriptionInput" rows="3" placeholder="Digite a descrição da tarefa"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar Tarefa</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contato</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="nameInput">Nome</label>
+              <input type="text" class="form-control" id="nameInput" placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Email</label>
+              <input type="email" class="form-control" id="emailInput" placeholder="Digite seu email">
+            </div>
+            <div class="form-group">
+              <label for="phoneInput">Telefone</label>
+              <input type="tel" class="form-control" id="phoneInput" placeholder="Digite seu telefone">
+            </div>
+            <div class="form-group">
+              <label for="messageInput">Mensagem</label>
+              <textarea class="form-control" id="messageInput" rows="3" placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>
